@@ -105,6 +105,10 @@ export default function Home() {
   };
 
   const editSubject = (subject: Subject) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     setEditingSubject(subject);
   };
 
@@ -197,10 +201,10 @@ export default function Home() {
         <button
           onClick={generateSchedules}
           disabled={subjects.length === 0 || isGenerating}
-          className={`text-white p-2 rounded w-full transition duration-300 ${
+          className={`text-white p-2 rounded font-bold w-full transition duration-300 ${
             subjects.length === 0 || isGenerating
               ? "bg-gray-500 cursor-not-allowed"
-              : "bg-green-500 hover:bg-green-600"
+              : "bg-green-600 hover:bg-green-700"
           }`}
         >
           {isGenerating ? UI_TEXTS.GENERATING : UI_TEXTS.GENERATE_SCHEDULES}
