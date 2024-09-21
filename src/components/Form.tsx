@@ -53,6 +53,18 @@ const Form: React.FC<FormProps> = ({
           required
           min="1"
         />
+        <Input
+          id="units"
+          label={FORM_LABELS.UNITS}
+          type="number"
+          name="units"
+          value={formData.units || ""}
+          onChange={(e) =>
+            setFormData({ ...formData, units: parseInt(e.target.value) })
+          }
+          required
+          min="1"
+        />
         <SelectOption
           id="primaryDay"
           label={FORM_LABELS.LECTURE_DAY}
@@ -155,18 +167,6 @@ const Form: React.FC<FormProps> = ({
             value: period,
             label: period.toString(),
           }))}
-        />
-        <Input
-          id="units"
-          label={FORM_LABELS.UNITS}
-          type="number"
-          name="units"
-          value={formData.units || ""}
-          onChange={(e) =>
-            setFormData({ ...formData, units: parseInt(e.target.value) })
-          }
-          required
-          min="1"
         />
       </div>
       <div className="flex justify-between gap-4">
