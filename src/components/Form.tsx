@@ -3,7 +3,7 @@ import Input from "./Input";
 import Button from "./Button";
 import SelectOption from "./SelectOption";
 import { Subject } from "@/helper/generateSchedules";
-import { DAYS, UI_TEXTS } from "@/constants/arabic";
+import { DAYS, UI_TEXTS, FORM_LABELS } from "@/constants/arabic";
 
 interface FormProps {
   formData: Partial<Subject>;
@@ -27,7 +27,7 @@ const Form: React.FC<FormProps> = ({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Input
           id="name"
-          label="اسم المادة"
+          label={FORM_LABELS.SUBJECT_NAME}
           type="text"
           name="name"
           value={formData.name || ""}
@@ -36,7 +36,7 @@ const Form: React.FC<FormProps> = ({
         />
         <Input
           id="code"
-          label="كود المادة"
+          label={FORM_LABELS.SUBJECT_CODE}
           type="text"
           name="code"
           value={formData.code || ""}
@@ -45,7 +45,7 @@ const Form: React.FC<FormProps> = ({
         />
         <Input
           id="group"
-          label="المجموعة"
+          label={FORM_LABELS.GROUP}
           type="number"
           name="group"
           value={formData.group || ""}
@@ -55,7 +55,7 @@ const Form: React.FC<FormProps> = ({
         />
         <SelectOption
           id="primaryDay"
-          label="يوم المحاضرة"
+          label={FORM_LABELS.LECTURE_DAY}
           name="primaryDay"
           value={formData.primaryDay !== undefined ? formData.primaryDay : ""}
           onChange={(e) =>
@@ -66,7 +66,7 @@ const Form: React.FC<FormProps> = ({
         />
         <SelectOption
           id="primaryStartPeriod"
-          label="بداية فترة المحاضرة"
+          label={FORM_LABELS.LECTURE_START}
           name="primaryStartPeriod"
           value={formData.primaryStartPeriod || ""}
           onChange={(e) =>
@@ -83,7 +83,7 @@ const Form: React.FC<FormProps> = ({
         />
         <SelectOption
           id="primaryEndPeriod"
-          label="نهاية فترة المحاضرة"
+          label={FORM_LABELS.LECTURE_END}
           name="primaryEndPeriod"
           value={formData.primaryEndPeriod || ""}
           onChange={(e) =>
@@ -100,7 +100,7 @@ const Form: React.FC<FormProps> = ({
         />
         <SelectOption
           id="secondaryDay"
-          label="يوم السكشن (اختياري)"
+          label={FORM_LABELS.SECTION_DAY}
           name="secondaryDay"
           value={
             formData.secondaryDay !== undefined ? formData.secondaryDay : ""
@@ -116,7 +116,7 @@ const Form: React.FC<FormProps> = ({
         />
         <SelectOption
           id="secondaryStartPeriod"
-          label="بداية فترة السكشن (اختياري)"
+          label={FORM_LABELS.SECTION_START}
           name="secondaryStartPeriod"
           value={
             formData.secondaryStartPeriod !== undefined
@@ -137,7 +137,7 @@ const Form: React.FC<FormProps> = ({
         />
         <SelectOption
           id="secondaryEndPeriod"
-          label="نهاية فترة السكشن (اختياري)"
+          label={FORM_LABELS.SECTION_END}
           name="secondaryEndPeriod"
           value={
             formData.secondaryEndPeriod !== undefined
@@ -158,7 +158,7 @@ const Form: React.FC<FormProps> = ({
         />
         <Input
           id="units"
-          label="عدد الوحدات"
+          label={FORM_LABELS.UNITS}
           type="number"
           name="units"
           value={formData.units || ""}

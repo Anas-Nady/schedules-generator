@@ -34,3 +34,17 @@ export const UI_TEXTS = {
   CONFIRM: "تأكيد",
   CANCEL: "إلغاء",
 };
+
+// Add this new object for form labels
+export const FORM_LABELS = {
+  SUBJECT_NAME: "اسم المادة",
+  SUBJECT_CODE: "كود المادة",
+  GROUP: "المجموعة",
+  LECTURE_DAY: "يوم المحاضرة",
+  LECTURE_START: "بداية فترة المحاضرة",
+  LECTURE_END: "نهاية فترة المحاضرة",
+  SECTION_DAY: "يوم السكشن (اختياري)",
+  SECTION_START: "بداية فترة السكشن (اختياري)",
+  SECTION_END: "نهاية فترة السكشن (اختياري)",
+  UNITS: "عدد الوحدات",
+};
