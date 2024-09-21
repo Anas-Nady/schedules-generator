@@ -21,7 +21,7 @@ export const UI_TEXTS = {
   GENERATED_SCHEDULES: "الجداول المولدة:",
   SCHEDULE: "الجدول",
   TOTAL_UNITS: "إجمالي الوحدات:",
-  PAGE: "الصفحة",
+  TABLE: "الجدول",
   OF: "من",
   PREVIOUS: "السابق",
   NEXT: "التالي",

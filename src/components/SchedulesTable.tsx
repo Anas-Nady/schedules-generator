@@ -46,7 +46,7 @@ const SchedulesTable: React.FC<SchedulesTableProps> = ({
               {UI_TEXTS.PREVIOUS}
             </button>
             <span className="p-2">
-              {UI_TEXTS.PAGE} {currentPage} {UI_TEXTS.OF} {schedules.length}
+              {UI_TEXTS.TABLE} {currentPage} {UI_TEXTS.OF} {schedules.length}
             </span>
             <button
               onClick={() =>
