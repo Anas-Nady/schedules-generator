@@ -19,7 +19,7 @@ const SelectOption: React.FC<SelectOptionProps> = ({
   onChange,
   required = false,
   options,
-  placeholder,
+  placeholder = " ",
 }) => {
   return (
     <div>

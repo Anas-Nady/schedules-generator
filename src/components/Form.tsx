@@ -63,7 +63,6 @@ const Form: React.FC<FormProps> = ({
           }
           required
           options={DAYS.map((day, index) => ({ value: index, label: day }))}
-          placeholder="اختر يوم المحاضرة"
         />
         <SelectOption
           id="primaryStartPeriod"
@@ -81,7 +80,6 @@ const Form: React.FC<FormProps> = ({
             value: period,
             label: period.toString(),
           }))}
-          placeholder="اختر بداية فترة المحاضرة"
         />
         <SelectOption
           id="primaryEndPeriod"
@@ -99,7 +97,6 @@ const Form: React.FC<FormProps> = ({
             value: period,
             label: period.toString(),
           }))}
-          placeholder="اختر نهاية فترة المحاضرة"
         />
         <SelectOption
           id="secondaryDay"
@@ -116,7 +113,6 @@ const Form: React.FC<FormProps> = ({
             })
           }
           options={DAYS.map((day, index) => ({ value: index, label: day }))}
-          placeholder="اختر يوم السكشن (اختياري)"
         />
         <SelectOption
           id="secondaryStartPeriod"
@@ -138,7 +134,6 @@ const Form: React.FC<FormProps> = ({
             value: period,
             label: period.toString(),
           }))}
-          placeholder="اختر بداية فترة السكشن (اختياري)"
         />
         <SelectOption
           id="secondaryEndPeriod"
@@ -160,7 +155,6 @@ const Form: React.FC<FormProps> = ({
             value: period,
             label: period.toString(),
           }))}
-          placeholder="اختر نهاية فترة السكشن (اختياري)"
         />
         <Input
           id="units"
