@@ -45,19 +45,20 @@ const SubjectsList: React.FC<SubjectsListProps> = ({
 
   return (
     <div className="mb-6">
-      <div className="flex justify-between items-center mb-2">
-        <h2 className="text-xl font-bold">{UI_TEXTS.SUBJECTS}</h2>
+      <div className="flex justify-between items-center mb-5 flex-wrap gap-5">
+        <h2 className="text-3xl font-bold">{UI_TEXTS.SUBJECTS}</h2>
         <div className="flex gap-2">
-          <div className="p-1 flex gap-1 items-center rounded border border-gray-400 hover:bg-gray-700 duration-150">
-            <Button
-              onClick={downloadSubjects}
-              className="flex gap-2 justify-between items-center"
-              disabled={subjects.length === 0}
-            >
-              <FaDownload className="inline-block" />
-              {UI_TEXTS.DOWNLOAD_SUBJECTS}
-            </Button>
-          </div>
+          {subjects.length > 0 && (
+            <div className="p-1 flex gap-1 items-center rounded border border-gray-400 hover:bg-gray-700 duration-150">
+              <Button
+                onClick={downloadSubjects}
+                className="flex gap-2 justify-between items-center"
+              >
+                <FaDownload className="inline-block" />
+                {UI_TEXTS.DOWNLOAD_SUBJECTS}
+              </Button>
+            </div>
+          )}
           <div className="p-1 rounded border border-gray-400 hover:bg-gray-700 duration-150">
             <Button
               onClick={triggerFileInput}
@@ -81,7 +82,7 @@ const SubjectsList: React.FC<SubjectsListProps> = ({
           {sortedSubjects.map((subject, index) => (
             <li
               key={index}
-              className="mb-1 flex items-center justify-between group"
+              className="mb-1 flex items-center justify-between group gap-3"
             >
               <span className="group-hover:border-b-2 group-hover:border-white transition-all duration-100">
                 {subject.name} - G: {subject.group} - يوم المحاضرة:{" "}
