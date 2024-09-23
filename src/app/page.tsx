@@ -6,7 +6,7 @@ import { SUCCESS_MESSAGES, ERROR_MESSAGES, UI_TEXTS } from "@/constants/arabic";
 import Form from "@/components/Form";
 import SubjectsList from "@/components/SubjectsList";
 import SchedulesTable from "@/components/SchedulesTable";
-import { FaGithub } from "react-icons/fa"; // Import the GitHub icon
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const [subjects, setSubjects] = useState<Subject[]>([]);
@@ -165,7 +165,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto p-9 bg-gray-800 text-white border border-gray-600 my-5">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-center flex-wrap gap-5 sm:justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-center">
           {UI_TEXTS.SCHEDULE_GENERATOR}
         </h1>
@@ -173,9 +173,12 @@ export default function Home() {
           href="https://github.com/anas-nady/schedule-generator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-gray-300 transition-colors"
+          className="text-white hover:text-gray-300 transition-colors bg-gray-700 p-2 rounded flex justify-center items-center flex-col gap-2"
         >
-          <FaGithub size={35} />
+          <span>
+            <FaGithub size={40} />
+          </span>
+          <span className="text-xl font-bold text-green-500 ">Code</span>
         </a>
       </div>
 
