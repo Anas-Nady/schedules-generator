@@ -2,9 +2,11 @@
 
 Generate all possible schedules for your subjects with ease! 🚀
 
-![Schedule Generator Screenshot 1](./screenshots/screenshot_1.png)
+![Schedule Generator Screenshot 1](./screenshots/1.png)
 
-![Schedule Generator Screenshot 2](./screenshots/screenshot_2.png)
+![Schedule Generator Screenshot 1](./screenshots/2.png)
+
+![Schedule Generator Screenshot 2](./screenshots/3.png)
 
 ## ✨ Features
 
