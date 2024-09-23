@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Subject } from "@/helper/generateSchedules";
 import { DAYS, UI_TEXTS, ERROR_MESSAGES } from "@/constants/arabic";
+import { sortSubjects } from "@/helper/sortSubjects";
 
 interface SubjectsListProps {
   subjects: Subject[];
@@ -28,17 +29,20 @@ const SubjectsList: React.FC<SubjectsListProps> = ({
     setConfirmDelete(null);
   };
 
+  // Sort subjects using the helper function
+  const sortedSubjects = sortSubjects(subjects);
+
   return (
     <div className="mb-6">
       <h2 className="text-xl font-bold mb-2">{UI_TEXTS.SUBJECTS}</h2>
-      {subjects.length > 0 ? (
+      {sortedSubjects.length > 0 ? (
         <ul className="list-disc list-inside">
-          {subjects.map((subject, index) => (
+          {sortedSubjects.map((subject, index) => (
             <li
               key={index}
               className="mb-1 flex items-center justify-between group"
             >
-              <span className="group-hover:border-b-2 group-hover:border-white transition-all duration-300">
+              <span className="group-hover:border-b-2 group-hover:border-white transition-all duration-100">
                 {subject.name} - G: {subject.group} - يوم المحاضرة:{" "}
                 {DAYS[subject.primaryDay]}
                 {subject.secondaryDay !== undefined &&
