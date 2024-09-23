@@ -15,10 +15,10 @@ const SchedulesTable: React.FC<SchedulesTableProps> = ({
   setCurrentPage,
 }) => {
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-2">{UI_TEXTS.GENERATED_SCHEDULES}</h2>
+    <div className="w-full max-w-full overflow-hidden">
+      <h2 className="text-lg font-bold mb-2">{UI_TEXTS.GENERATED_SCHEDULES}</h2>
       {schedules.length > 0 && (
-        <p className="mt-4 text-xl pb-5 font-bold text-green-500 text-center">
+        <p className="mt-2 text-lg pb-3 font-bold text-green-500 text-center">
           {UI_TEXTS.TOTAL_UNITS}{" "}
           {Object.values(schedules[currentPage - 1] || {})
             .flat()
@@ -31,10 +31,7 @@ const SchedulesTable: React.FC<SchedulesTableProps> = ({
       )}
       {schedules.length > 0 ? (
         <>
-          <div className="mb-4 border border-gray-600 p-4 rounded">
-            <h3 className="font-bold mb-2 text-xl text-green-500">
-              {UI_TEXTS.SCHEDULE} {currentPage}
-            </h3>
+          <div className="mb-4 border border-gray-600 p-4 rounded w-full overflow-hidden">
             {renderScheduleTable(schedules[currentPage - 1])}
           </div>
           <div className="flex justify-center space-x-2">
