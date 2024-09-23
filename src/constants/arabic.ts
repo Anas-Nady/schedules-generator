@@ -3,6 +3,7 @@ export const DAYS = ["السبت", "الأحد", "الاثنين", "الثلاث
 export const SUCCESS_MESSAGES = {
   SUBJECT_UPDATED: "تم تحديث المادة بنجاح",
   SUBJECT_ADDED: "تمت إضافة المادة بنجاح",
+  SUBJECTS_UPLOADED: "تم تحميل المواد بنجاح",
 };
 
 export const ERROR_MESSAGES = {
@@ -13,13 +14,15 @@ export const ERROR_MESSAGES = {
   GENERATE_ERROR: "حدث خطأ أثناء توليد الجداول. يرجى المحاولة مرة أخرى.",
   NO_VALID_SCHEDULES:
     "لم يتم العثور على جداول صالحة. يرجى التحقق من تفاصيل المواد وإعادة المحاولة.",
+  INVALID_FILE_FORMAT: "تنسيق الملف غير صالح. يرجى تحميل ملف subjects.js صحيح.",
+  FILE_PARSE_ERROR:
+    "حدث خطأ أثناء قراءة الملف. يرجى التحقق من المحتوى وإعادة المحاولة.",
 };
 
 export const UI_TEXTS = {
   SCHEDULE_GENERATOR: "مولد الجداول الدراسية",
   SUBJECTS: "المواد:",
   GENERATED_SCHEDULES: "الجداول المولدة:",
-  SCHEDULE: "الجدول",
   TOTAL_UNITS: "إجمالي الوحدات:",
   TABLE: "الجدول",
   OF: "من",
@@ -33,6 +36,8 @@ export const UI_TEXTS = {
   RESET_FORM: "إعادة تعيين النموذج", // Added this line
   CONFIRM: "تأكيد",
   CANCEL: "إلغاء",
+  DOWNLOAD_SUBJECTS: "تنزيل المواد",
+  UPLOAD_SUBJECTS: "رفع المواد",
 };
 
 // Add this new object for form labels

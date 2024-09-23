@@ -163,6 +163,46 @@ export default function Home() {
     setError(null);
   };
 
+  const downloadSubjects = () => {
+    const subjectsData = `const subjects = ${JSON.stringify(subjects, null, 2)};
+
+export default subjects;`;
+
+    const blob = new Blob([subjectsData], { type: "text/javascript" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "subjects.js";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const content = e.target?.result as string;
+          // Extract the array from the file content
+          const match = content.match(/const subjects = (\[[\s\S]*?\]);/);
+          if (match) {
+            const subjectsArray = JSON.parse(match[1]);
+            setSubjects(subjectsArray);
+            setSuccessMessage(SUCCESS_MESSAGES.SUBJECTS_UPLOADED);
+          } else {
+            setError(ERROR_MESSAGES.INVALID_FILE_FORMAT);
+          }
+        } catch (error) {
+          setError(ERROR_MESSAGES.FILE_PARSE_ERROR);
+        }
+      };
+      reader.readAsText(file);
+    }
+  };
+
   return (
     <div className="container mx-auto p-9 bg-gray-800 text-white border border-gray-600 my-5">
       <div className="flex justify-center flex-wrap gap-5 sm:justify-between items-center mb-6">
@@ -218,6 +258,8 @@ export default function Home() {
         subjects={subjects}
         editSubject={editSubject}
         deleteSubject={deleteSubject}
+        downloadSubjects={downloadSubjects}
+        handleFileUpload={handleFileUpload}
       />
 
       <SchedulesTable
