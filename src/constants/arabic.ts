@@ -32,15 +32,14 @@ export const UI_TEXTS = {
   DELETE: "حذف",
   GENERATE_SCHEDULES: "توليد الجداول",
   GENERATING: "جاري التوليد...",
-  ADD_SUBJECT: "إضافة مادة", // Added this line
-  RESET_FORM: "إعادة تعيين النموذج", // Added this line
+  ADD_SUBJECT: "إضافة مادة",
+  RESET_FORM: "إعادة تعيين النموذج",
   CONFIRM: "تأكيد",
   CANCEL: "إلغاء",
   DOWNLOAD_SUBJECTS: "تنزيل المواد",
   UPLOAD_SUBJECTS: "رفع المواد",
 };
 
-// Add this new object for form labels
 export const FORM_LABELS = {
   SUBJECT_NAME: "اسم المادة",
   SUBJECT_CODE: "كود المادة",

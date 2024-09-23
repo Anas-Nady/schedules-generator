@@ -13,7 +13,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // Validate that each subject has the required fields
     if (
       !subjects.every(
         (subject) =>

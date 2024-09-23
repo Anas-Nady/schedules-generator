@@ -3,7 +3,7 @@ import { Subject } from "@/helpers/generateSchedules";
 import { DAYS, UI_TEXTS, ERROR_MESSAGES } from "@/constants/arabic";
 import { sortSubjects } from "@/helpers/sortSubjects";
 import Button from "@/components/Button";
-import { FaDownload, FaUpload } from "react-icons/fa"; // Add this import
+import { FaDownload, FaUpload } from "react-icons/fa";
 
 interface SubjectsListProps {
   subjects: Subject[];
@@ -40,7 +40,6 @@ const SubjectsList: React.FC<SubjectsListProps> = ({
     fileInputRef.current?.click();
   };
 
-  // Sort subjects.
   const sortedSubjects = sortSubjects(subjects);
 
   return (

@@ -28,7 +28,7 @@ function generateSchedules(
   subjects: Subject[],
   limit: number = 100
 ): Schedule[] {
-  const allSchedules: Set<string> = new Set(); // Use a Set to store unique schedules
+  const allSchedules: Set<string> = new Set();
   const currentSchedule: Schedule = createEmptySchedule();
   const placedSubjects: Set<string> = new Set(); // Track placed subjects by their code and group
 

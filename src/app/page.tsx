@@ -52,7 +52,7 @@ export default function Home() {
       primaryDay: formData.primaryDay || 0,
       primaryStartPeriod: formData.primaryStartPeriod || 1,
       primaryEndPeriod: formData.primaryEndPeriod || 1,
-      units: Number(formData.units) || 0, // Ensure units is a number
+      units: Number(formData.units) || 0,
     } as Subject;
 
     setSubjects((prevSubjects) => {
