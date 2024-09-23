@@ -39,8 +39,8 @@ const SubjectsList: React.FC<SubjectsListProps> = ({
               className="mb-1 flex items-center justify-between group"
             >
               <span className="group-hover:border-b-2 group-hover:border-white transition-all duration-300">
-                {subject.name} ({subject.code}) - المجموعة: {subject.group} -
-                يوم المحاضرة: {DAYS[subject.primaryDay]}
+                {subject.name} - G: {subject.group} - يوم المحاضرة:{" "}
+                {DAYS[subject.primaryDay]}
                 {subject.secondaryDay !== undefined &&
                   ` - يوم السكشن: ${DAYS[subject.secondaryDay]}`}
               </span>
