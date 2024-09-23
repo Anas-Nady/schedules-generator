@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Subject } from "@/helper/generateSchedules";
+import { Subject } from "@/helpers/generateSchedules";
 import { DAYS, UI_TEXTS, ERROR_MESSAGES } from "@/constants/arabic";
-import { sortSubjects } from "@/helper/sortSubjects";
+import { sortSubjects } from "@/helpers/sortSubjects";
 import Button from "@/components/Button";
 import { FaDownload, FaUpload } from "react-icons/fa"; // Add this import
 

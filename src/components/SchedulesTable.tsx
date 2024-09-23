@@ -1,5 +1,5 @@
 import React from "react";
-import { Schedule } from "@/helper/generateSchedules";
+import { Schedule } from "@/helpers/generateSchedules";
 import renderScheduleTable from "@/components/renderScheduleTable";
 import { UI_TEXTS, ERROR_MESSAGES } from "@/constants/arabic";
 

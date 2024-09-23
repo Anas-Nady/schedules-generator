@@ -1,4 +1,4 @@
-import { Subject } from "@/helper/generateSchedules";
+import { Subject } from "@/helpers/generateSchedules";
 
 export const sortSubjects = (subjects: Subject[]): Subject[] => {
   return [...subjects].sort((a, b) => {

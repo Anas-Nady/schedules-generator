@@ -1,4 +1,4 @@
-import generateSchedules, { Schedule } from "@/helper/generateSchedules";
+import generateSchedules, { Schedule } from "@/helpers/generateSchedules";
 
 export async function POST(req: Request) {
   try {

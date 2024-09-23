@@ -2,7 +2,7 @@ import React from "react";
 import Input from "./Input";
 import Button from "./Button";
 import SelectOption from "./SelectOption";
-import { Subject } from "@/helper/generateSchedules";
+import { Subject } from "@/helpers/generateSchedules";
 import { DAYS, UI_TEXTS, FORM_LABELS } from "@/constants/arabic";
 
 interface FormProps {

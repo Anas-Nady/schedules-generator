@@ -1,4 +1,4 @@
-import { Schedule } from "@/helper/generateSchedules";
+import { Schedule } from "@/helpers/generateSchedules";
 
 const renderScheduleTable = (schedule: Schedule) => {
   if (!schedule) return null;

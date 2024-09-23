@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Subject, Schedule } from "@/helper/generateSchedules";
+import { Subject, Schedule } from "@/helpers/generateSchedules";
 import { SUCCESS_MESSAGES, ERROR_MESSAGES, UI_TEXTS } from "@/constants/arabic";
 import Form from "@/components/Form";
 import SubjectsList from "@/components/SubjectsList";
